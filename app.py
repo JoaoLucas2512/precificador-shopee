@@ -8,7 +8,7 @@ if "historico" not in st.session_state:
 st.title("Precificação Shopee")
 nome_produto = st.text_input("Nome do Produto")
 custo_produto = st.number_input("Custo")
-preco = st.number_input("Preço")
+preco = st.number_input("Preço de venda")
 
 
 #cálculos
@@ -39,4 +39,5 @@ if st.button("Salvar no histórico"):
 
 if st.session_state.historico:
     st.subheader("Histórico de cálculos")
+
     st.dataframe(st.session_state.historico)
